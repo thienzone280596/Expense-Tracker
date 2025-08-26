@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="ExpenseTracker" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="edO-Pl-6iP" id="JB8-cw-Gsi"/>
+                <outlet property="headerView" destination="1iz-kZ-nVP" id="0mL-3W-NVp"/>
+                <outlet property="tftSearch" destination="g6a-UQ-Dg7" id="sje-zq-ffI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15L-z7-jSC">
+                    <rect key="frame" x="0.0" y="80" width="393" height="772"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iz-kZ-nVP" customClass="CustomHeaderView" customModule="ExpenseTracker" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="mdR-PC-XYj"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xei-Te-w4G">
+                            <rect key="frame" x="0.0" y="60" width="393" height="60"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6a-UQ-Dg7">
+                                    <rect key="frame" x="16" y="0.0" width="361" height="60"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="g6a-UQ-Dg7" secondAttribute="bottom" id="QKx-oc-zZE"/>
+                                <constraint firstAttribute="height" constant="60" id="Tjq-E6-IQE"/>
+                                <constraint firstItem="g6a-UQ-Dg7" firstAttribute="leading" secondItem="Xei-Te-w4G" secondAttribute="leading" constant="16" id="mWb-FU-hx1"/>
+                                <constraint firstItem="g6a-UQ-Dg7" firstAttribute="top" secondItem="Xei-Te-w4G" secondAttribute="top" id="qwH-yZ-pfj"/>
+                                <constraint firstAttribute="trailing" secondItem="g6a-UQ-Dg7" secondAttribute="trailing" constant="16" id="xQF-xm-z3k"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="edO-Pl-6iP">
+                            <rect key="frame" x="0.0" y="120" width="393" height="652"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9KY-3b-CA1">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" name="EAEAEC"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Xei-Te-w4G" secondAttribute="trailing" id="0lD-dN-apc"/>
+                        <constraint firstItem="edO-Pl-6iP" firstAttribute="leading" secondItem="15L-z7-jSC" secondAttribute="leading" id="3tP-iD-5lM"/>
+                        <constraint firstAttribute="bottom" secondItem="edO-Pl-6iP" secondAttribute="bottom" id="JgV-Ja-sjC"/>
+                        <constraint firstItem="Xei-Te-w4G" firstAttribute="leading" secondItem="15L-z7-jSC" secondAttribute="leading" id="M50-yT-fn6"/>
+                        <constraint firstAttribute="trailing" secondItem="edO-Pl-6iP" secondAttribute="trailing" id="O1T-er-JLt"/>
+                        <constraint firstItem="1iz-kZ-nVP" firstAttribute="top" secondItem="15L-z7-jSC" secondAttribute="top" id="Oh4-74-Bm1"/>
+                        <constraint firstItem="Xei-Te-w4G" firstAttribute="top" secondItem="1iz-kZ-nVP" secondAttribute="bottom" id="c22-yx-TJ4"/>
+                        <constraint firstAttribute="trailing" secondItem="1iz-kZ-nVP" secondAttribute="trailing" id="cbW-yb-6t6"/>
+                        <constraint firstItem="1iz-kZ-nVP" firstAttribute="leading" secondItem="15L-z7-jSC" secondAttribute="leading" id="cvf-KJ-C9K"/>
+                        <constraint firstItem="edO-Pl-6iP" firstAttribute="top" secondItem="Xei-Te-w4G" secondAttribute="bottom" id="xEj-px-UhR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="15L-z7-jSC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="O89-KT-zSm"/>
+                <constraint firstAttribute="bottom" secondItem="15L-z7-jSC" secondAttribute="bottom" id="YKI-JC-Jc9"/>
+                <constraint firstAttribute="trailing" secondItem="15L-z7-jSC" secondAttribute="trailing" id="uxl-Vp-VrX"/>
+                <constraint firstItem="15L-z7-jSC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xdn-Rv-69D"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="EAEAEC">
+            <color red="0.9179999828338623" green="0.9179999828338623" blue="0.92500007152557373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
