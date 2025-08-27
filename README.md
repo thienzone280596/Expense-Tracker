@@ -57,5 +57,6 @@ Hỗ trợ đăng ký / đăng nhập, quản lý chi tiêu/thu nhập, tìm ki�
 
 ---
 
-## 📂 Cấu trúc thư mục
+## Hướng dẫn sử dụng
+mở file USER_GUIDE.md
 
